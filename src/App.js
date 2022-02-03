@@ -17,24 +17,23 @@ function App() {
 
   return (
     <div className="App">
-      {!start ? (
-        <button onClick={onPlay}>Smug</button>
-      ) : (
-        <div className="App-Grid">
-          <img
-            className="App-Wallpaper"
-            src={`/wallpaper${8}.gif`}
-            alt="wallpaper"
-          />
-          <img className="App-Kid" src={kid} alt="logo" />
-        </div>
-      )}
-      <audio
-        className="App-Audio"
-        ref={audioPlayer}
-        src={music}
-        loop
-      />
+      <div className="App-Grid">
+        {!start ? (
+          <button className="App-Button" onClick={onPlay}>
+            dance
+          </button>
+        ) : (
+          <>
+            <img
+              className="App-Wallpaper"
+              src={`/wallpaper${8}.gif`}
+              alt="wallpaper"
+            />
+            <img className="App-Kid" src={kid} alt="logo" />
+          </>
+        )}
+      </div>
+      <audio className="App-Audio" ref={audioPlayer} src={music} loop />
     </div>
   );
 }
