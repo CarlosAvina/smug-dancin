@@ -26,7 +26,7 @@ function App() {
           <>
             <img
               className="App-Wallpaper"
-              src={`/wallpaper${8}.gif`}
+              src={`/wallpaper${1}.gif`}
               alt="wallpaper"
             />
             <img className="App-Kid" src={kid} alt="logo" />
