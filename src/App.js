@@ -2,6 +2,7 @@ import React from "react";
 
 import SideMenu from "./components/SideMenu";
 import Thumbnail from "./components/Thumbnail";
+import CloseButton from "./components/CloseButton";
 
 import kid from "./media/smug.gif";
 import music from "./media/music.wav";
@@ -59,7 +60,7 @@ function App() {
       <audio className="App-Audio" ref={audioPlayer} src={music} loop muted />
       {sideMenu && (
         <SideMenu>
-          <button onClick={toggleSideMenu}>Close</button>
+          <CloseButton onClick={toggleSideMenu} />
           {wallpapers.map((item) => (
             <Thumbnail
               id={item}
