@@ -1,4 +1,5 @@
 import React from "react";
+import cx from "classnames";
 
 import SideMenu from "./components/SideMenu";
 import Thumbnail from "./components/Thumbnail";
@@ -42,10 +43,10 @@ function App() {
           </button>
         ) : (
           <>
-            <img
-              className="App-Wallpaper"
-              src={`/wallpaper${wallpaper}.gif`}
-              alt="wallpaper"
+            <div
+              className={cx("App-Wallpaper", {
+                [`App-Wallpaper-${wallpaper}`]: true,
+              })}
             />
             <img className="App-Kid" src={kid} alt="logo" />
             <button
