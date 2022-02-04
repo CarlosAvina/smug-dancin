@@ -62,12 +62,8 @@
   vertical-align: middle;
   white-space: nowrap;
 
-  grid-column: 2 / 3;
-  grid-row: 2 / 3;
   height: 50px;
   min-width: 50px;
-  justify-self: center;
-  align-self: center;
   padding: 0 50px;
 }
 
@@ -97,4 +93,18 @@
 
 .App-Button:disabled {
   cursor: auto;
+}
+
+.App-Button-Start {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+  justify-self: center;
+  align-self: center;
+}
+
+.App-Button-Wallpaper {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: center;
 }
