@@ -1,0 +1,11 @@
+.thumbnail {
+  border-radius: 10px;
+  cursor: pointer;
+  max-height: 100px;
+  object-fit: cover;
+  border: 4px solid black;
+}
+
+.thumbnail-selected {
+  border: 4px solid #d6c918;
+}
