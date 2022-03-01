@@ -72,18 +72,21 @@ function App() {
             />
             <Menu>
               <MenuButton
+                label="Change background"
                 imageStyles="Menu-Button-Background"
                 onClick={toggleSideMenu}
                 alt="background-icon"
                 image={background}
               />
               <MenuButton
+                label="Move kid"
                 imageStyles="Menu-Button-Position"
                 onClick={togglePositionMenu}
                 image={move}
                 alt="move-icon"
               />
               <MenuButton
+                label="Fullscreen"
                 imageStyles="Menu-Button-Fullscreen"
                 image={fullscreen}
                 alt="fullscreen-icon"
