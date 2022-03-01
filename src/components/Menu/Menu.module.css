@@ -4,5 +4,6 @@
   grid-column: 3 / 4;
   grid-row: 1 / 2;
   justify-self: end;
-  align-self: center;
+  align-self: start;
+  margin: 15px 20px;
 }
