@@ -172,6 +172,21 @@
   display: grid;
   grid-template-columns: repeat(3, 1fr);
   grid-template-rows: repeat(3, 1fr);
+  padding: 0;
+  gap: 10px;
+}
+
+.Position-Menu-Button {
+  cursor: pointer;
+  border: none;
+  border-radius: 5px;
+}
+
+.Position-Menu-Kid-Silhouette {
+  width: 40px;
+  height: 40px;
+  object-fit: cover;
+  filter: brightness(0%);
 }
 
 .Menu-Button-Background {
