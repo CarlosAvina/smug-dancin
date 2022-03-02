@@ -11,6 +11,7 @@ import MenuButton from "./components/MenuButton";
 import kid from "./media/smug.gif";
 import music from "./media/music.wav";
 
+import kidSilhouette from "./media/kid_silhouette.png";
 import fullscreen from "./media/fullscreen.png";
 import move from "./media/move.png";
 import background from "./media/background.png";
@@ -112,34 +113,26 @@ function App() {
       )}
       {positionMenu && (
         <SideMenu>
+          <CloseButton onClick={togglePositionMenu} />
           <menu className="Position-Menu">
-            <button id="1" onClick={moveKidTo}>
-              1
-            </button>
-            <button id="2" onClick={moveKidTo}>
-              2
-            </button>
-            <button id="3" onClick={moveKidTo}>
-              3
-            </button>
-            <button id="4" onClick={moveKidTo}>
-              4
-            </button>
-            <button id="5" onClick={moveKidTo}>
-              5
-            </button>
-            <button id="6" onClick={moveKidTo}>
-              6
-            </button>
-            <button id="7" onClick={moveKidTo}>
-              7
-            </button>
-            <button id="8" onClick={moveKidTo}>
-              8
-            </button>
-            <button id="9" onClick={moveKidTo}>
-              9
-            </button>
+            {new Array(...Array(9)).map((_, index) => {
+              const id = index + 1;
+              return (
+                <button
+                  id={id}
+                  className="Position-Menu-Button"
+                  onClick={moveKidTo}
+                >
+                  {kidPosition === id ? (
+                    <img
+                      className="Position-Menu-Kid-Silhouette"
+                      src={kidSilhouette}
+                      alt="kid_silhouette"
+                    />
+                  ) : null}
+                </button>
+              );
+            })}
           </menu>
         </SideMenu>
       )}
