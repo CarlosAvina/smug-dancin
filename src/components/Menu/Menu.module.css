@@ -1,0 +1,9 @@
+.menu {
+  display: flex;
+  align-items: center;
+  grid-column: 1 / 4;
+  grid-row: 1 / 2;
+  justify-self: end;
+  align-self: start;
+  margin: 15px 20px;
+}

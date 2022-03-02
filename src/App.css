@@ -58,6 +58,43 @@
   align-self: center;
 }
 
+.App-Kid-1 {
+  grid-column: 1 / 2;
+  grid-row: 1 / 2;
+}
+.App-Kid-2 {
+  grid-column: 2 / 3;
+  grid-row: 1 / 2;
+}
+.App-Kid-3 {
+  grid-column: 3 / 4;
+  grid-row: 1 / 2;
+}
+.App-Kid-4 {
+  grid-column: 1 / 2;
+  grid-row: 2 / 3;
+}
+.App-Kid-5 {
+  grid-column: 2 / 3;
+  grid-row: 2 / 3;
+}
+.App-Kid-6 {
+  grid-column: 3 / 4;
+  grid-row: 2 / 3;
+}
+.App-Kid-7 {
+  grid-column: 1 / 2;
+  grid-row: 3 / 4;
+}
+.App-Kid-8 {
+  grid-column: 2 / 3;
+  grid-row: 3 / 4;
+}
+.App-Kid-9 {
+  grid-column: 3 / 4;
+  grid-row: 3 / 4;
+}
+
 .App-Audio {
   display: none;
 }
@@ -131,9 +168,24 @@
   align-self: center;
 }
 
-.App-Button-Wallpaper {
-  grid-column: 3 / 4;
-  grid-row: 1 / 2;
-  justify-self: end;
-  align-self: center;
+.Position-Menu {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+}
+
+.Menu-Button-Background {
+  width: 60px;
+  height: 60px;
+  transform: translateY(2px) translateX(3px);
+}
+
+.Menu-Button-Position {
+  width: 50px;
+  height: 50px;
+}
+
+.Menu-Button-Fullscreen {
+  width: 40px;
+  height: 40px;
 }
