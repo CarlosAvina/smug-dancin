@@ -96,7 +96,7 @@ function App() {
           </>
         )}
       </div>
-      <audio className="App-Audio" ref={audioPlayer} src={music} loop muted />
+      <audio className="App-Audio" ref={audioPlayer} src={music} loop />
       {sideMenu && (
         <SideMenu>
           <CloseButton onClick={toggleSideMenu} />
