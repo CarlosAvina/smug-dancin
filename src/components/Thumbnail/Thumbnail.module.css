@@ -13,3 +13,7 @@
 .thumbnail-selected {
   border: 4px solid #d6c918;
 }
+
+.video {
+  max-height: 100px;
+}

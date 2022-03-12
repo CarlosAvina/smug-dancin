@@ -2,6 +2,8 @@ import React from "react";
 import cx from "classnames";
 import "./App.css";
 
+import { VIDEO_URLS } from "./consts/videos";
+
 import SideMenu from "./components/SideMenu";
 import Thumbnail from "./components/Thumbnail";
 import CloseButton from "./components/CloseButton";
@@ -16,7 +18,7 @@ import fullscreen from "./media/fullscreen.png";
 import move from "./media/move.png";
 import background from "./media/background.png";
 
-const wallpapers = [1, 2, 3, 4, 5, 6, 7, 8];
+const wallpapers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
 function App() {
   const [start, setStart] = React.useState(false);
@@ -86,11 +88,15 @@ function App() {
           </button>
         ) : (
           <>
-            <div
-              className={cx("App-Wallpaper", {
-                [`App-Wallpaper-${wallpaper}`]: true,
-              })}
-            />
+            <video
+              key={wallpaper}
+              className="App-Wallpaper"
+              playsInLine
+              loop
+              autoPlay
+            >
+              <source src={VIDEO_URLS[wallpaper - 1]} type="video/webm" />
+            </video>
             <img
               className={cx("App-Kid", { [`App-Kid-${kidPosition}`]: true })}
               src={kid}
@@ -130,7 +136,7 @@ function App() {
             <Thumbnail
               id={item}
               key={item}
-              src={`/wallpaper${item}.gif`}
+              src={VIDEO_URLS[item - 1]}
               selected={item === wallpaper}
               onClick={changeWallpaper}
             />

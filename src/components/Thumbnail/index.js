@@ -1,14 +1,19 @@
 import cx from "classnames";
 import styles from "./Thumbnail.module.css";
 
-const Thumbnail = ({ src, alt, selected = false, ...extraProps }) => {
+const Thumbnail = ({ src, selected = false, ...extraProps }) => {
   return (
-    <img
-      className={cx(styles.thumbnail, { [styles['thumbnail-selected']]: selected })}
-      src={src}
-      alt={alt}
+    <video
+      className={cx(styles.thumbnail, styles.video, {
+        [styles["thumbnail-selected"]]: selected,
+      })}
+      playsInLine
+      loop
+      autoPlay
       {...extraProps}
-    />
+    >
+      <source src={src} type="video/webm" />
+    </video>
   );
 };
 
