@@ -91,7 +91,7 @@ function App() {
             <video
               key={wallpaper}
               className="App-Wallpaper"
-              playsInLine
+              playsInline
               loop
               autoPlay
             >

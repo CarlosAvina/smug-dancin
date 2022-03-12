@@ -7,7 +7,7 @@ const Thumbnail = ({ src, selected = false, ...extraProps }) => {
       className={cx(styles.thumbnail, styles.video, {
         [styles["thumbnail-selected"]]: selected,
       })}
-      playsInLine
+      playsInline
       loop
       autoPlay
       {...extraProps}
