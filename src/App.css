@@ -15,38 +15,6 @@
 .App-Wallpaper {
   grid-column: 1 / -1;
   grid-row: 1 / -1;
-}
-
-.App-Wallpaper-1 {
-  background: url(../public/wallpaper1.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-.App-Wallpaper-2 {
-  background: url(../public/wallpaper2.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-.App-Wallpaper-3 {
-  background: url(../public/wallpaper3.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-.App-Wallpaper-4 {
-  background: url(../public/wallpaper4.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-.App-Wallpaper-5 {
-  background: url(../public/wallpaper5.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-.App-Wallpaper-6 {
-  background: url(../public/wallpaper6.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-.App-Wallpaper-7 {
-  background: url(../public/wallpaper7.gif) no-repeat center center fixed;
-  background-size: cover;
-}
-.App-Wallpaper-8 {
-  background: url(../public/wallpaper8.gif) no-repeat center center fixed;
   background-size: cover;
 }
 
