@@ -2,7 +2,7 @@ import React from "react";
 import cx from "classnames";
 import "./App.css";
 
-import { VIDEO_URLS } from "./consts/videos";
+import { VIDEOS } from "./consts/videos";
 
 import SideMenu from "./components/SideMenu";
 import Thumbnail from "./components/Thumbnail";
@@ -95,7 +95,7 @@ function App() {
               loop
               autoPlay
             >
-              <source src={VIDEO_URLS[wallpaper - 1]} type="video/webm" />
+              <source src={VIDEOS[wallpaper - 1]} type="video/webm" />
             </video>
             <img
               className={cx("App-Kid", { [`App-Kid-${kidPosition}`]: true })}
@@ -136,7 +136,7 @@ function App() {
             <Thumbnail
               id={item}
               key={item}
-              src={VIDEO_URLS[item - 1]}
+              src={VIDEOS[item - 1]}
               selected={item === wallpaper}
               onClick={changeWallpaper}
             />

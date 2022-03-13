@@ -1,3 +1,17 @@
+import video1 from "../media/1.webm";
+import video2 from "../media/2.webm";
+import video3 from "../media/3.webm";
+import video4 from "../media/4.webm";
+import video5 from "../media/5.webm";
+import video6 from "../media/6.webm";
+import video7 from "../media/7.webm";
+import video8 from "../media/8.webm";
+import video9 from "../media/9.webm";
+import video10 from "../media/10.webm";
+import video11 from "../media/11.webm";
+import video12 from "../media/12.webm";
+import video13 from "../media/13.webm";
+
 export const VIDEO_URLS = [
   "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/601220/654fa1daf88611e1503e73cda1ef597cd5603b6c.webm",
   "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/874400/c6ec1e32708cb1e403a4c79db03b0128e080e1e8.webm",
@@ -12,4 +26,20 @@ export const VIDEO_URLS = [
   "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/1098340/fb38a2a61cd4b9bb0dd15fd6321dd63073cc440d.webm",
   "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/646270/b59ad35dfaba9fc6dff7557619f1f471501af8d2.webm",
   "https://cdn.akamai.steamstatic.com/steamcommunity/public/images/items/601220/edf2be21f52652edd7576f917ea841ab29766221.webm",
+];
+
+export const VIDEOS = [
+  video1,
+  video2,
+  video3,
+  video4,
+  video5,
+  video6,
+  video7,
+  video8,
+  video9,
+  video10,
+  video11,
+  video12,
+  video13,
 ];
