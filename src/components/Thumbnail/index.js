@@ -1,7 +1,7 @@
 import cx from "classnames";
 import styles from "./Thumbnail.module.css";
 
-const Thumbnail = ({ src, selected = false, ...extraProps }) => {
+const Thumbnail = ({ media, selected = false, ...extraProps }) => {
   return (
     <video
       className={cx(styles.thumbnail, styles.video, {
@@ -10,9 +10,11 @@ const Thumbnail = ({ src, selected = false, ...extraProps }) => {
       playsInline
       loop
       autoPlay
+      poster={media.poster}
       {...extraProps}
     >
-      <source src={src} type="video/webm" />
+      <source src={media.mini.webm} type="video/webm" />
+      <source src={media.mini.mp4} type="video/mp4" />
     </video>
   );
 };

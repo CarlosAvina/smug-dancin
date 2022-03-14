@@ -95,7 +95,8 @@ function App() {
               loop
               autoPlay
             >
-              <source src={VIDEO_URLS[wallpaper - 1]} type="video/webm" />
+              <source src={VIDEO_URLS[wallpaper - 1].hd.webm} type="video/webm" />
+              <source src={VIDEO_URLS[wallpaper - 1].hd.mp4} type="video/mp4" />
             </video>
             <img
               className={cx("App-Kid", { [`App-Kid-${kidPosition}`]: true })}
@@ -136,7 +137,7 @@ function App() {
             <Thumbnail
               id={item}
               key={item}
-              src={VIDEO_URLS[item - 1]}
+              media={VIDEO_URLS[item - 1]}
               selected={item === wallpaper}
               onClick={changeWallpaper}
             />
