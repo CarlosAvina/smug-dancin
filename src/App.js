@@ -1,5 +1,6 @@
 import React, { lazy, Suspense } from "react";
 import cx from "classnames";
+import { isMobile } from "react-device-detect";
 import "./App.css";
 
 import { VIDEO_URLS } from "./consts/videos";
@@ -115,20 +116,24 @@ function App() {
                 alt="background-icon"
                 image={background}
               />
-              <MenuButton
-                label="Move kid"
-                imageStyles="Menu-Button-Position"
-                onClick={togglePositionMenu}
-                image={move}
-                alt="move-icon"
-              />
-              <MenuButton
-                label="Fullscreen"
-                imageStyles="Menu-Button-Fullscreen"
-                image={fullscreen}
-                alt="fullscreen-icon"
-                onClick={toggleFullScreen}
-              />
+              {!isMobile ? (
+                <>
+                  <MenuButton
+                    label="Move kid"
+                    imageStyles="Menu-Button-Position"
+                    onClick={togglePositionMenu}
+                    image={move}
+                    alt="move-icon"
+                  />
+                  <MenuButton
+                    label="Fullscreen"
+                    imageStyles="Menu-Button-Fullscreen"
+                    image={fullscreen}
+                    alt="fullscreen-icon"
+                    onClick={toggleFullScreen}
+                  />
+                </>
+              ) : null}
             </Menu>
           </>
         )}
