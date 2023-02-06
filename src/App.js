@@ -133,7 +133,13 @@ function App() {
           </>
         )}
       </div>
-      <audio className="App-Audio" ref={audioPlayer} src={music} loop />
+      <audio
+        className="App-Audio"
+        ref={audioPlayer}
+        src={music}
+        preload="metadata"
+        loop
+      />
       {sideMenu && (
         <Suspense fallback={<div>loading...</div>}>
           <SideMenu>
