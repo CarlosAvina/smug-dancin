@@ -1,3 +1,4 @@
+import { isMobile } from "react-device-detect";
 import cx from "classnames";
 import styles from "./Thumbnail.module.css";
 
@@ -13,8 +14,12 @@ const Thumbnail = ({ media, selected = false, ...extraProps }) => {
       poster={media.poster}
       {...extraProps}
     >
-      <source src={media.mini.webm} type="video/webm" />
-      <source src={media.mini.mp4} type="video/mp4" />
+      {!isMobile ? (
+        <>
+          <source src={media.mini.webm} type="video/webm" />
+          <source src={media.mini.mp4} type="video/mp4" />
+        </>
+      ) : null}
     </video>
   );
 };

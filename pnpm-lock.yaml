@@ -8,6 +8,7 @@ specifiers:
   '@testing-library/user-event': ^13.5.0
   classnames: ^2.3.1
   react: ^17.0.2
+  react-device-detect: ^2.2.2
   react-dom: ^17.0.2
   react-scripts: 5.0.0
   web-vitals: ^2.1.4
@@ -20,6 +21,7 @@ dependencies:
   '@testing-library/user-event': 13.5.0
   classnames: 2.3.2
   react: 17.0.2
+  react-device-detect: 2.2.2_sfoxds7t5ydpegc3knd667wn6m
   react-dom: 17.0.2_react@17.0.2
   react-scripts: 5.0.0_react@17.0.2
   web-vitals: 2.1.4
@@ -8363,6 +8365,17 @@ packages:
       - vue-template-compiler
     dev: false
 
+  /react-device-detect/2.2.2_sfoxds7t5ydpegc3knd667wn6m:
+    resolution: {integrity: sha512-zSN1gIAztUekp5qUT/ybHwQ9fmOqVT1psxpSlTn1pe0CO+fnJHKRLOWWac5nKxOxvOpD/w84hk1I+EydrJp7SA==}
+    peerDependencies:
+      react: '>= 0.14.0'
+      react-dom: '>= 0.14.0'
+    dependencies:
+      react: 17.0.2
+      react-dom: 17.0.2_react@17.0.2
+      ua-parser-js: 1.0.33
+    dev: false
+
   /react-dom/17.0.2_react@17.0.2:
     resolution: {integrity: sha512-s4h96KtLDUQlsENhMn1ar8t2bEa+q/YAtj8pPPdIjPDGBDIVNsrD9aXNWqspUe6AzKCIG0C1HZZLqLV7qpOBGA==}
     peerDependencies:
@@ -9574,6 +9587,10 @@ packages:
     resolution: {integrity: sha512-zdu8XMNEDepKKR+XYOXAVPtWui0ly0NtohUscw+UmaHiAWT8hrV1rr//H6V+0DvJ3OQ19S979M0laLfX8rm82Q==}
     dependencies:
       is-typedarray: 1.0.0
+    dev: false
+
+  /ua-parser-js/1.0.33:
+    resolution: {integrity: sha512-RqshF7TPTE0XLYAqmjlu5cLLuGdKrNu9O1KLA/qp39QtbZwuzwv1dT46DZSopoUMsYgXpB3Cv8a03FI8b74oFQ==}
     dev: false
 
   /unbox-primitive/1.0.2:
