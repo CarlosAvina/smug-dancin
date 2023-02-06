@@ -1,11 +1,9 @@
-import React from "react";
+import React, { lazy, Suspense } from "react";
 import cx from "classnames";
 import "./App.css";
 
 import { VIDEO_URLS } from "./consts/videos";
 
-import SideMenu from "./components/SideMenu";
-import Thumbnail from "./components/Thumbnail";
 import CloseButton from "./components/CloseButton";
 import Menu from "./components/Menu";
 import MenuButton from "./components/MenuButton";
@@ -17,6 +15,9 @@ import kidSilhouette from "./media/kid_silhouette.png";
 import fullscreen from "./media/fullscreen.png";
 import move from "./media/move.png";
 import background from "./media/background.png";
+
+const SideMenu = lazy(() => import("./components/SideMenu"));
+const Thumbnail = lazy(() => import("./components/Thumbnail"));
 
 const wallpapers = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13];
 
@@ -95,7 +96,10 @@ function App() {
               loop
               autoPlay
             >
-              <source src={VIDEO_URLS[wallpaper - 1].hd.webm} type="video/webm" />
+              <source
+                src={VIDEO_URLS[wallpaper - 1].hd.webm}
+                type="video/webm"
+              />
               <source src={VIDEO_URLS[wallpaper - 1].hd.mp4} type="video/mp4" />
             </video>
             <img
@@ -131,43 +135,47 @@ function App() {
       </div>
       <audio className="App-Audio" ref={audioPlayer} src={music} loop />
       {sideMenu && (
-        <SideMenu>
-          <CloseButton onClick={toggleSideMenu} />
-          {wallpapers.map((item) => (
-            <Thumbnail
-              id={item}
-              key={item}
-              media={VIDEO_URLS[item - 1]}
-              selected={item === wallpaper}
-              onClick={changeWallpaper}
-            />
-          ))}
-        </SideMenu>
+        <Suspense fallback={<div>loading...</div>}>
+          <SideMenu>
+            <CloseButton onClick={toggleSideMenu} />
+            {wallpapers.map((item) => (
+              <Thumbnail
+                id={item}
+                key={item}
+                media={VIDEO_URLS[item - 1]}
+                selected={item === wallpaper}
+                onClick={changeWallpaper}
+              />
+            ))}
+          </SideMenu>
+        </Suspense>
       )}
       {positionMenu && (
-        <SideMenu>
-          <CloseButton onClick={togglePositionMenu} />
-          <menu className="Position-Menu">
-            {new Array(...Array(9)).map((_, index) => {
-              const id = index + 1;
-              return (
-                <button
-                  id={id}
-                  className="Position-Menu-Button"
-                  onClick={moveKidTo}
-                >
-                  {kidPosition === id ? (
-                    <img
-                      className="Position-Menu-Kid-Silhouette"
-                      src={kidSilhouette}
-                      alt="kid_silhouette"
-                    />
-                  ) : null}
-                </button>
-              );
-            })}
-          </menu>
-        </SideMenu>
+        <Suspense fallback={<div>loading...</div>}>
+          <SideMenu>
+            <CloseButton onClick={togglePositionMenu} />
+            <menu className="Position-Menu">
+              {new Array(...Array(9)).map((_, index) => {
+                const id = index + 1;
+                return (
+                  <button
+                    id={id}
+                    className="Position-Menu-Button"
+                    onClick={moveKidTo}
+                  >
+                    {kidPosition === id ? (
+                      <img
+                        className="Position-Menu-Kid-Silhouette"
+                        src={kidSilhouette}
+                        alt="kid_silhouette"
+                      />
+                    ) : null}
+                  </button>
+                );
+              })}
+            </menu>
+          </SideMenu>
+        </Suspense>
       )}
     </div>
   );
