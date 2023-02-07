@@ -98,10 +98,21 @@ function App() {
               autoPlay
             >
               <source
-                src={VIDEO_URLS[wallpaper - 1].hd.webm}
+                src={
+                  isMobile
+                    ? VIDEO_URLS[wallpaper - 1].mini.webm
+                    : VIDEO_URLS[wallpaper - 1].hd.webm
+                }
                 type="video/webm"
               />
-              <source src={VIDEO_URLS[wallpaper - 1].hd.mp4} type="video/mp4" />
+              <source
+                src={
+                  isMobile
+                    ? VIDEO_URLS[wallpaper - 1].mini.mp4
+                    : VIDEO_URLS[wallpaper - 1].hd.mp4
+                }
+                type="video/mp4"
+              />
             </video>
             <img
               className={cx("App-Kid", { [`App-Kid-${kidPosition}`]: true })}
