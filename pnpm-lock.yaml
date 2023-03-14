@@ -6,6 +6,7 @@ specifiers:
   '@testing-library/jest-dom': ^5.16.2
   '@testing-library/react': ^12.1.2
   '@testing-library/user-event': ^13.5.0
+  '@vercel/analytics': ^0.1.11
   classnames: ^2.3.1
   react: ^17.0.2
   react-device-detect: ^2.2.2
@@ -19,6 +20,7 @@ dependencies:
   '@testing-library/jest-dom': 5.16.5
   '@testing-library/react': 12.1.5_sfoxds7t5ydpegc3knd667wn6m
   '@testing-library/user-event': 13.5.0
+  '@vercel/analytics': 0.1.11_react@17.0.2
   classnames: 2.3.2
   react: 17.0.2
   react-device-detect: 2.2.2_sfoxds7t5ydpegc3knd667wn6m
@@ -2746,6 +2748,14 @@ packages:
     dependencies:
       '@typescript-eslint/types': 5.51.0
       eslint-visitor-keys: 3.3.0
+    dev: false
+
+  /@vercel/analytics/0.1.11_react@17.0.2:
+    resolution: {integrity: sha512-mj5CPR02y0BRs1tN3oZcBNAX9a8NxsIUl9vElDPcqxnMfP0RbRc9fI9Ud7+QDg/1Izvt5uMumsr+6YsmVHcyuw==}
+    peerDependencies:
+      react: ^16.8||^17||^18
+    dependencies:
+      react: 17.0.2
     dev: false
 
   /@webassemblyjs/ast/1.11.1:
