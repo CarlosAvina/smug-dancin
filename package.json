@@ -6,7 +6,7 @@
     "@reach/portal": "^0.16.2",
     "@reach/tooltip": "^0.16.2",
     "@vercel/analytics": "^0.1.11",
-    "classnames": "^2.3.1",
+    "classnames": "^2.3.2",
     "next": "^14.0.2",
     "react": "^18.2.0",
     "react-device-detect": "^2.2.2",
@@ -17,12 +17,6 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start"
-  },
-  "eslintConfig": {
-    "extends": [
-      "react-app",
-      "react-app/jest"
-    ]
   },
   "browserslist": {
     "production": [
