@@ -1,21 +1,12 @@
 import React, { lazy, Suspense } from "react";
 import cx from "classnames";
 import { isMobile } from "react-device-detect";
-import "./App.css";
 
 import { VIDEO_URLS } from "./consts/videos";
 
 import CloseButton from "./components/CloseButton";
 import Menu from "./components/Menu";
 import MenuButton from "./components/MenuButton";
-
-import kid from "./media/smug.gif";
-import music from "./media/music.wav";
-
-import kidSilhouette from "./media/kid_silhouette.png";
-import fullscreen from "./media/fullscreen.png";
-import move from "./media/move.png";
-import background from "./media/background.png";
 
 const SideMenu = lazy(() => import("./components/SideMenu"));
 const Thumbnail = lazy(() => import("./components/Thumbnail"));
@@ -67,7 +58,7 @@ function App() {
         document.documentElement.mozRequestFullScreen();
       } else if (document.documentElement.webkitRequestFullScreen) {
         document.documentElement.webkitRequestFullScreen(
-          Element.ALLOW_KEYBOARD_INPUT
+          Element.ALLOW_KEYBOARD_INPUT,
         );
       }
     } else {
@@ -116,7 +107,7 @@ function App() {
             </video>
             <img
               className={cx("App-Kid", { [`App-Kid-${kidPosition}`]: true })}
-              src={kid}
+              src="/smug.gif"
               alt="logo"
             />
             <Menu>
@@ -125,7 +116,7 @@ function App() {
                 imageStyles="Menu-Button-Background"
                 onClick={toggleSideMenu}
                 alt="background-icon"
-                image={background}
+                image="/background.png"
               />
               {!isMobile ? (
                 <>
@@ -133,13 +124,13 @@ function App() {
                     label="Move kid"
                     imageStyles="Menu-Button-Position"
                     onClick={togglePositionMenu}
-                    image={move}
+                    image="/move.png"
                     alt="move-icon"
                   />
                   <MenuButton
                     label="Fullscreen"
                     imageStyles="Menu-Button-Fullscreen"
-                    image={fullscreen}
+                    image="/fullscreen.png"
                     alt="fullscreen-icon"
                     onClick={toggleFullScreen}
                   />
@@ -152,7 +143,7 @@ function App() {
       <audio
         className="App-Audio"
         ref={audioPlayer}
-        src={music}
+        src="/music.wav"
         preload="metadata"
         loop
       />
@@ -188,7 +179,7 @@ function App() {
                     {kidPosition === id ? (
                       <img
                         className="Position-Menu-Kid-Silhouette"
-                        src={kidSilhouette}
+                        src="/kid_silhouette.png"
                         alt="kid_silhouette"
                       />
                     ) : null}
