@@ -2,7 +2,7 @@ import React, { lazy, Suspense } from "react";
 import cx from "classnames";
 import { isMobile } from "react-device-detect";
 
-import { VIDEO_URLS } from "./consts/videos";
+import { VIDEO_URLS } from "../consts/videos";
 
 import CloseButton from "./components/CloseButton";
 import Menu from "./components/Menu";

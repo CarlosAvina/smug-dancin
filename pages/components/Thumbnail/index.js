@@ -11,13 +11,13 @@ const Thumbnail = ({ media, selected = false, ...extraProps }) => {
       playsInline
       loop
       autoPlay
-      poster={media.poster}
+      poster={media?.poster}
       {...extraProps}
     >
       {!isMobile ? (
         <>
-          <source src={media.mini.webm} type="video/webm" />
-          <source src={media.mini.mp4} type="video/mp4" />
+          <source src={media?.mini?.webm} type="video/webm" />
+          <source src={media?.mini?.mp4} type="video/mp4" />
         </>
       ) : null}
     </video>
